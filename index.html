@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executar Script Python</title>
+  <script>
+    async function executarScript() {
+      const response = await fetch('/executar_script');
+      const data = await response.json();
+      document.getElementById("resultado").innerText = data.resultado;
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Executar Script Python</h1>
+  <button onclick="executarScript()">Executar Script</button>
+  <pre id="resultado"></pre>
+</body>
+
+</html>
